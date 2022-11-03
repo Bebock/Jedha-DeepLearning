@@ -11,11 +11,11 @@ The objective is to build a machine learning model that predicts which Tweets ar
 
 ----
 
-3. Comment procéder ?
+# 3. Comment procéder ?
 
-Pré-requis
+## Requirements
 
-Les librairies suivantes sont nécessaires :
+The following librairies are required :
 
     re
     unidecode
@@ -36,26 +36,15 @@ Les librairies suivantes sont nécessaires :
     turtle
     IPython
 
-Les fichiers
-
-Les notebooks peuvent s'utiliser les uns à la suite des autres ou indépendamment puisque les données générées par chaque notebook sont fournies dans les fichiers csv.
-
-    Etape 1 - Infos des hotels.ipynb fournit le scraping de Booking.com selon 2 méthodes :
-        Utilisation de SCRAPY -> table_hotels_scrapy.csv
-        Utilisation de BEAUTIFULSOUP -> table_hotels_BS.csv
-    Etape 2 - Données Météo.ipynb prend en input table_hotels_scrapy.csv ou table_hotels_BS.csv et fournit les données météorologiques
-        Coordonnées GPS des villes : table_villes_coord.csv
-        Météo d'aujourd'hui et des 7 prochains jours : data_meteo.csv
-    Etape 3 - Cartographies.ipynb prend en input les 3 fichiers csv (hotels, coord et meteo)
-    Etape 4 - ETL.ipynb prend en input les 3 fichiers csv (hotels, coord et meteo)
-
 ## Dataset
 
 Kaggle provides a dataset of 10 000 tweets that were hand classified as disaster-related or not. In the train dataset, around 43% are disaster-related. 
 
+## Files
+
 ---
 
-4. Overview des principaux résultats
+# 4. Overview of the main results
 
 ## Exploratory Descriptive Analysis
 
@@ -70,26 +59,51 @@ First of all, we extracted some quantitative features, not directly linked to th
 
 Statistically speaking, all these characteristics were related to the target variable (disaster tweet or not). However, the sample size of the dataset provides too much statistical power so we focused on graphical explorations. 
 It appeared that the disaster-related tweets contain longer words in average, less uppercases, more #, much less @, and less urls in mean but the disaster-related tweets are in proportion more prone to contain at least one url. 
+
 ![image](https://user-images.githubusercontent.com/38078432/199684886-fa83a42a-578f-4fa9-8b0d-9e2ca9825776.png)
+
+## Content description 
+
+The tweets content has been described after pre-processing and lemmatization with : 
+- Top bigrams according to the target variable (disaster-related or not)
+
+![image](https://user-images.githubusercontent.com/38078432/199688800-c420992d-8514-4831-85d8-d46c41d7f43e.png)
+
+- Wordclouds according to the target variable (disaster-related or not)
+
+![image](https://user-images.githubusercontent.com/38078432/199688934-01fdd71d-402b-4a18-9ba1-3570e7ebc4e9.png)
+
+## Sentiment analysis
+
+Disaster tweets appeared less associated with neutral or positive sentiments. 
+
+![image](https://user-images.githubusercontent.com/38078432/199689331-ae2eb7dc-4271-49e7-b795-351a7cc0a79e.png)
+
+However, the sentiment analysis allowed us to detect some questionning coding in the dataset. Indeed, displaying the tweets coded as disaster-related and categorized as positive by the sentiment analysis, we can read for exemple the following tweets : 
+- "my favorite lady came to our volunteer meeting hopefully joining her youth collision and i am excite" 
+- "ok peace I hope I fall off a cliff along with my dignity"
+- ":) well I think that sounds like a fine plan where little derailment is possible so I applaud you :)"
+... and they do not refer to disasters. It might indicate some confusing labels in the training dataset. 
+
+
+
+
 
 ---- 
 
 # 5. Informations
 
-## Outils
+## Tools
 
-Les notebooks ont été développés avec Visual Studio Code. La partie ETL fonctionne avec :
+The notebook has been developed with Visual Studio Code.
 
-    Un compte AWS (payant)
-    PGAdmin
+## Authors & contributors
 
-## Auteurs & contributeurs
-
-Auteur :
+Author :
 
     Helene alias @Bebock
 
-La dream team :
+The dream team :
 
     Henri alias @HenriPuntous
     Jean alias @Chedeta
