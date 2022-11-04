@@ -71,7 +71,7 @@ The tweets content has been described after pre-processing and lemmatization wit
 
 - Wordclouds according to the target variable (disaster-related or not)
 
-![image](https://user-images.githubusercontent.com/38078432/199688934-01fdd71d-402b-4a18-9ba1-3570e7ebc4e9.png)
+![image](https://user-images.githubusercontent.com/38078432/200079057-fc9bd898-c497-4e90-9a4e-2d85df54002d.png)
 
 ## Sentiment analysis
 
