@@ -107,6 +107,7 @@ The best models may now be improved thanks to fine tuning of hyperparameters.
 ## Tools
 
 The notebook has been developed with Visual Studio Code.
+
 The USE is available [here](https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder)
 
 ## Authors & contributors
