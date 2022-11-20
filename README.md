@@ -11,7 +11,7 @@ The objective is to build a machine learning model that predicts which Tweets ar
 
 ----
 
-# 3. Comment procéder ?
+# 3. How to procede ?
 
 ## Requirements
 
@@ -19,28 +19,27 @@ The following librairies are required :
 
     re
     unidecode
-    bs4
-    requests
+    spellchecker
+    contractions
+    string
     math
     pandas
-    json
+    numpy
     plotly
-    datetime
-    os
-    logging
-    scrapy
-    folium
-    pyproj
     matplotlib
-    colour
-    turtle
-    IPython
+    seaborn
+    spacy
+    nltk
+    gensim
+    pyLDAvis
+    wordcloud
+    sklearn
+    xgboost
+    tensorflow
 
 ## Dataset
 
 Kaggle provides a dataset of 10 000 tweets that were hand classified as disaster-related or not. In the train dataset, around 43% are disaster-related. 
-
-## Files
 
 ---
 
@@ -85,9 +84,21 @@ However, the sentiment analysis allowed us to detect some questionning coding in
 - ":) well I think that sounds like a fine plan where little derailment is possible so I applaud you :)"
 ... and they do not refer to disasters. It might indicate some confusing labels in the training dataset. 
 
+## Prediction models : How to automatically detect a disaster-related tweet ?
 
+We tried 3 main approaches : 
+- Using classical Machine learning models on the previously extracte features 
+- Using classical Machine learning models on recoded text through TF-IDF or BoW
+- Using neural networks
 
+The results were the following : 
+![image](https://user-images.githubusercontent.com/38078432/202900172-2100d79c-4a29-4c00-a7d2-9cc3e4f50ec0.png)
 
+It appeared that a pre-trained embedding neural netword (Universal Sentence Encoder) had the best performances in terms of ROC score, f1 score and accuracy. However, classical Machine Leanrning models performed on Bag of Words (Neural Net and SGDC) performed at a similar level. 
+
+## Perspectives 
+
+The best models may now be improved thanks to fine tuning of hyperparameters. 
 
 ---- 
 
@@ -96,6 +107,7 @@ However, the sentiment analysis allowed us to detect some questionning coding in
 ## Tools
 
 The notebook has been developed with Visual Studio Code.
+The USE is available [here](https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder)
 
 ## Authors & contributors
 
