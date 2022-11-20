@@ -1,3 +1,5 @@
+Lien vers la video de présentation : [Ici](https://share.vidyard.com/watch/o5HG1KrgvZ2q2eaTxFc17u?)
+
 # 1. Project presentation : Natural Language Processing with Disaster Tweets
 
 This project is one of the getting started challenges offered by [Kaggle](https://www.kaggle.com/c/nlp-getting-started). 
